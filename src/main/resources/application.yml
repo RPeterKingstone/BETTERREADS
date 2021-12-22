@@ -8,13 +8,13 @@ spring:
       client:
         registration:
           github:
-            client-id: Iv1.03d97e2ed5a941de
-            client-secret: a497768dd6e8fa89e2d83fc704db47aae5ae39e2
+            client-id: 
+            client-secret: 
   data:
     cassandra:
       keyspace-name: main
       username: oGZYZakZPsHLpjJCZkUziHSa
-      password: BzwT8kOTz2_xb.5HyXhf7UvQsy,xfzLnmDR_EFD_bNodGlUF-qFXA0eeGJ1J0KIv0Ebw.4b0Q51i-ZPlRfFdGwRF+fnDOp-NCCy-x_T85o3ZkGnLA2aSCf9Psdjy4TTl
+      password: 
       schema-action: create-if-not-exists
       request:
         timeout: 30s
