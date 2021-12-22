@@ -1,4 +1,4 @@
-package io.javabrains;
+package com.peter.betterreads;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
@@ -9,6 +9,7 @@ import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 @Configuration
+@EnableWebSecurity
 public class SecurityAdapter extends WebSecurityConfigurerAdapter {
 
     @Override
@@ -16,8 +17,8 @@ public class SecurityAdapter extends WebSecurityConfigurerAdapter {
 		// @formatter:off
 		http
 			.authorizeRequests(a -> a
-				.antMatchers("/", "/error").permitAll()
-				.anyRequest().authenticated()
+				//.antMatchers("/", "/error").permitAll()
+				.anyRequest().permitAll()
 			)
 			.exceptionHandling(e -> e
 				.authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
